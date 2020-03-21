@@ -1,4 +1,4 @@
-# Badges from other Planets
+# Badges from Other Planets
 
 I made these supercapacitor powered badges for [Nowhere 2019](https://www.goingnowhere.org/), a regional burn near Zaragoza, Spain, for our fledgling barrio "People from Other Planets".
 
