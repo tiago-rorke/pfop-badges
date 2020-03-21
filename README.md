@@ -1,18 +1,29 @@
 # Badges from other Planets
 
-I made these supercapacitor powered badges for [Nowhere 2019](https://www.goingnowhere.org/), a regional burn near Zaragoza, Spain, for our fledgling barrio "People from Other Planets"
+I made these supercapacitor powered badges for [Nowhere 2019](https://www.goingnowhere.org/), a regional burn near Zaragoza, Spain, for our fledgling barrio "People from Other Planets".
 
-I wanted to try to use supercapacitors to avoid consuming hundreds of non-rechargeable coin cell batteries whilst keeping the design as simple as possible. Because 5V supercaps are considerably more expensive, I've used a pair of 2.5V caps in series, with a 2.5V zener across each cap to prevent overcharging.  Not sure of the safety of this, the small amount of the use these boards have had so far haven't led to any explosions, but none-the-less *use this at your own risk!*
+I wanted to try to use supercapacitors to avoid consuming hundreds of non-rechargeable coin cell batteries whilst keeping the design as simple as possible. Because 5V supercaps are considerably more expensive, I've used a pair of 2.5V caps in series, with a 2.5V zener across each cap to prevent overcharging.  Not sure of the safety of this, the small amount of the use these boards have seen so far haven't yet led to any explosions, but none-the-less **use these at your own risk!**
 
-I settled on a pair of 4.7F caps in series as a balance between cost/size/capacity, which for these two example sketches seem to provide around an hour of interaction after about 1min of charging.
+I settled on a pair of 4.7F caps in series as a balance between cost/size/capacity, which for these two example sketches seem to provide around an hour of interaction and blinking lights after about 1 min of charging.  Without PWM the LEDs I chose are blindingly bright, I would suggest using larger resistors or different LEDs.
+
+![PFOP badges pinouts](pfop_badges.png)
+
+There are two versions of the board, one with an eletret microphone and amplifier for reacting to sound, the other with a 2.2M resistor for doing capacitive touch sensing.
+
+The charging circuit uses a mosfet and 5V zener to switch on a green LED once the capacitors are fully charged.  The usb VBUS contact is split in two, to simultaneously connect a red led when the board is plugged in to charge, a hack which seems to work most of the time.  The capacitor inrush current is limited by a 1W resistor, which can get a bit toasty and should probably be bigger.
+
+I made some adafruit inspired led-sequins, along with some sewable transistor break-outs, which are included in the board layouts.
+
+The silkscreen designs on the back of the boards are by fellow bairro member [Luke Andrews](http://lukeandrewsdesign.com/), and the PFOP logo is by the barrio lead [Rob Allison](http://www.robertallison.co.uk/).
 
 We also disassembled a bunch of old laptop batteries, removed any good cells and put them into [empty powerbanks](https://www.aliexpress.com/item/32966395604.html) to provide charging units for the badges, and to use as power sources for other activities we did at the burn in our desert makerspace :).
 
 
+
 ## BOM
 
-| | | qty |
-|---|---|---|
+| | qty |
+|---|---|
 | [capacitors 4.7F](https://pt.farnell.com/samxon/dre475s0eg20rrdap/cap-4-7f-2-5v-double-layer-radial/dp/2800103) | 2 |
 | [attiny45](https://pt.mouser.com/ProductDetail/Microchip-Technology-Atmel/ATTINY45-20XU?qs=sGAEpiMZZMvqv2n3s2xjsQTu%2F4bUyWdjf4Rc8T7jfeQ%3D) | 1 |
 | [white leds](https://www.tme.eu/pt/en/details/ll-r3014w-w5m-q10/smd-white-leds/lucky-light/) | 3 |
