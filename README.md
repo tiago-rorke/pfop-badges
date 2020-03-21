@@ -10,7 +10,7 @@ I settled on a pair of 4.7F caps in series as a balance between cost/size/capaci
 
 There are two versions of the board, one with an eletret microphone and amplifier for reacting to sound, the other with a 2.2M resistor for doing capacitive touch sensing.
 
-The charging circuit uses a mosfet and 5V zener to switch on a green LED once the capacitors are fully charged.  The usb VBUS contact is split in two, to simultaneously connect a red led when the board is plugged in to charge, a hack which seems to work most of the time.  The capacitor inrush current is limited by a 1W resistor, which can get a bit toasty and should probably be bigger.
+The charging circuit uses a mosfet and 5.1V zener to switch on a green LED once the capacitors are fully charged.  This worked in the prototype circuit, but didn't work with the zener's i put on the finished boards, maybe the 5.1V is a bit too high for usb voltages.  The usb VBUS contact is split in two, to simultaneously connect a red led when the board is plugged in to charge, a hack which seems to work most of the time.  The capacitor inrush current is limited by a 1W resistor, which can get a bit toasty and should probably be bigger.
 
 I made some adafruit inspired led-sequins, along with some sewable transistor break-outs, which are included in the board layouts.
 
@@ -31,7 +31,7 @@ We also disassembled a bunch of old laptop batteries, removed any good cells and
 | [green led](https://www.tme.eu/pt/en/details/el17-215sygc_53/smd-colour-leds/everlight/) | 1 |
 | [3.3v regulator](https://www.tme.eu/pt/en/details/ap7313-33srg-7/ldo-unregulated-voltage-regulators/diodes-incorporated/) | 1 |
 | [2.7v zener](https://www.tme.eu/pt/en/details/tzmb2v7-gs08/smd-zener-diodes/vishay/) | 2 |
-| [5.1v zener](https://www.tme.eu/pt/en/details/bzt55c5v1-gs08/smd-zener-diodes/vishay/) | 1 |
+| 5.1v zener | 1 |
 | [2n7000 mosfet](https://www.tme.eu/pt/en/details/2n7002lt1g/smd-n-channel-transistors/on-semiconductor/) | 1 |
 | [resistor power 5.6R 1W](https://www.tme.eu/pt/en/details/smd2512-5r6/2512-smd-resistors/royal-ohm/25121wj056jt4e/) | 1 |
 | [resistor led 100R](https://www.tme.eu/pt/en/details/rc0805fr-07100r/0805-smd-resistors/yageo/rc0805fr-07100rl/) | 5 |
